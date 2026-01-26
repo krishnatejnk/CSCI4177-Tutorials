@@ -1,0 +1,4 @@
+# Netlify config for Tutorial 1 deployment
+# Publish directory: tutorial1 (static HTML, no build)
+[build]
+  publish = "tutorial1"
