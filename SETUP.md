@@ -25,16 +25,55 @@ Follow these steps to complete your individual Tutorial 1 deliverables.
 
 ## 2. Mirror to GitLab (FCS)
 
-1. Create a **new project** on [FCS GitLab](https://git.cs.dal.ca) (e.g. `CSCI4177-Tutorials`).
-2. Set the project to **Private**.
-3. Either:
-   - **Option A:** Add the GitLab repo as a second remote and push:
-     ```bash
-     git remote add gitlab https://git.cs.dal.ca/YOUR_CSID/CSCI4177-Tutorials.git
-     git push gitlab main
-     ```
-   - **Option B:** Use GitLab’s **Mirroring** (Settings → Repository → Mirroring) to pull from your GitHub repo.
-4. Add the **Course Instructor** and **TAs** as **Maintainers** (Project → Members). Get their CSIDs from Brightspace (Tutorial 1 module) or Teams #Tutorials.
+### Step 2a: Create the GitLab project
+
+1. Go to [FCS GitLab](https://git.cs.dal.ca) and sign in with your Dal credentials.
+2. Click **New project** → **Create blank project**.
+3. **Project name:** `CSCI4177-Tutorials` (or `CSCI5709-Tutorials`).
+4. **Project URL:** leave the default (uses your CSID/username).
+5. **Visibility:** set to **Private**.
+6. **Initialize with README:** leave **unchecked** (you already have code).
+7. Click **Create project**.
+
+### Step 2b: Push your GitHub repo to GitLab
+
+**Option A – Push from your machine (recommended):**
+
+1. Copy your new project’s GitLab URL (e.g. `https://git.cs.dal.ca/YOUR_CSID/CSCI4177-Tutorials.git`). Find it on the project page under **Clone** → **HTTPS**.
+2. In a terminal, from your `CSCI4177-Tutorials` folder:
+
+   ```powershell
+   cd "C:\Users\Krishna\OneDrive\Desktop\MACS\SEM 5\CSCI5709\Project\CSCI4177-Tutorials"
+   git remote add gitlab https://git.cs.dal.ca/YOUR_CSID/CSCI4177-Tutorials.git
+   git push gitlab main
+   ```
+
+   Replace `YOUR_CSID` with your GitLab username (usually your Dal CSID). When prompted, use your **Dal login** and **Dal password** (or GitLab personal access token if you use one).
+
+3. To push future updates to both remotes:
+   ```powershell
+   git push origin main
+   git push gitlab main
+   ```
+
+**Option B – GitLab pull mirror:**
+
+1. In your GitLab project: **Settings** → **Repository** → **Mirroring repositories**.
+2. **Git repository URL:** `https://github.com/YOUR_USERNAME/CSCI4177-Tutorials.git`
+3. **Authentication:** if the repo is public, leave blank; if private, use a GitHub PAT or mirroring credentials.
+4. **Mirror direction:** **Pull**.
+5. Save. GitLab will pull from GitHub periodically (or trigger a sync). You still need to push to GitHub first; GitLab mirrors from there.
+
+### Step 2c: Add Instructor and TAs as Maintainers
+
+1. In your GitLab project, go to **Manage** → **Members** (or **Project information** → **Members**).
+2. Click **Invite members**.
+3. Enter each **CSID** (GitLab username) for the Course Instructor and TAs.  
+   Get these from the **Tutorial 1** module on Brightspace or the course **#Tutorials** Teams channel.
+4. **Role:** choose **Maintainer** for each.
+5. Click **Invite**.
+
+Add this **GitLab project URL** to your `README.txt` (Section 3).
 
 ---
 
@@ -69,6 +108,35 @@ Follow these steps to complete your individual Tutorial 1 deliverables.
 - [ ] Instructor and TAs added as **Maintainers** on the group GitLab project.
 - [ ] Each member has their own **branch**; everyone has successfully pushed at least once.
 - [ ] **T1_Group6.pdf** (project idea + frameworks + justifications) submitted to **Tutorial 1 (Group)** on Brightspace by one group member.
+
+---
+
+## Troubleshooting: GitHub push (403 / authentication)
+
+**"Permission denied" or "Invalid username or token"** usually means:
+
+1. **Wrong account** – You're signed in as user A but the remote is `userB/repo`. Fix:
+   - Use a repo **you** own: create it under your GitHub account, then  
+     `git remote set-url origin https://github.com/YOUR_USERNAME/CSCI4177-Tutorials.git`
+   - Or get added as a collaborator on the other user's repo (then use that account's token).
+
+2. **Password auth disabled** – GitHub no longer accepts account passwords for Git. Use one of:
+
+   **Option A: Personal Access Token (PAT)**  
+   - GitHub → Settings → Developer settings → [Personal access tokens](https://github.com/settings/tokens) → Generate new token (classic).  
+   - Enable `repo` scope, generate, copy the token.  
+   - When Git asks for a password, **paste the token** (not your GitHub password).  
+   - To cache it (Windows):  
+     `git config --global credential.helper manager`
+
+   **Option B: SSH**  
+   - [Add an SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) to your GitHub account.  
+   - Switch remote to SSH:  
+     `git remote set-url origin git@github.com:YOUR_USERNAME/CSCI4177-Tutorials.git`  
+   - Then `git push -u origin main` (no password prompt).
+
+   **Option C: GitHub CLI**  
+   - Install [GitHub CLI](https://cli.github.com/), run `gh auth login`, then use Git as usual.
 
 ---
 
