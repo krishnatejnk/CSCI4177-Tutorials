@@ -4,7 +4,7 @@ Individual deliverable for CSCI 4177/5709. A React SPA with login, user profile 
 
 * Date Created: 27 Feb 2026
 * Last Modification Date: 27 Feb 2026
-* Lab URL: [Update with your Tutorial 3 Netlify deployment URL after deploying]
+* Lab URL: https://69a212783553e500089ee86e--csci4177-tutorials3.netlify.app/
 * Git URL: https://github.com/krishnatejnk/CSCI4177-Tutorials
 * GitLab: https://git.cs.dal.ca/knkumar/csci4177-tutorials
 

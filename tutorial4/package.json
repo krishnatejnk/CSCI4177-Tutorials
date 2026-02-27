@@ -1,0 +1,13 @@
+{
+  "name": "tutorial4",
+  "version": "1.0.0",
+  "description": "Tutorial 4 - Back-End Frameworks I: Express.js REST API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

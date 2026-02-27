@@ -1,12 +1,14 @@
 # Tutorial 1 – Application Frameworks (Individual)
 # Tutorial 3 – Front-End Frameworks II (Individual)
+# Tutorial 4 – Back-End Frameworks I (Individual)
 
 Individual deliverable for CSCI 4177/5709 Tutorials.
 
 * *Date Created*: 26 Jan 2026
 * *Last Modification Date*: 27 Feb 2026
 * *Tutorial 1 Lab URL*: https://tranquil-paprenjak-3a7d30.netlify.app/
-* *Tutorial 3 Lab URL*: [Update with your Tutorial 3 Netlify deployment URL after deploying]
+* *Tutorial 3 Lab URL*: https://69a212783553e500089ee86e--csci4177-tutorials3.netlify.app/
+* *Tutorial 4 Lab URL*: [Update with your deployment link after deploying - see tutorial4/README.txt for Render/Railway instructions]
 * *Individual Tutorials GitLab : https://git.cs.dal.ca/knkumar/csci4177-tutorials
 * *Individual Tutorials GitHub : https://github.com/krishnatejnk/CSCI4177-Tutorials
 
@@ -58,6 +60,14 @@ To run the Tutorial 1 app locally:
 
 Tutorial 1 is deployed on **Netlify** (publish: `tutorial1`, no build). Tutorial 3 is built with Vite and deployed (publish: `tutorial3/dist`). See `netlify.toml` for build settings. This repository is mirrored from GitHub to FCS GitLab for marking.
 
+### Deploying Tutorial 4
+
+Tutorial 4 is a Node.js/Express REST API. Deploy to **Render** (or Railway, Cyclic):
+- Root directory: `tutorial4`
+- Build command: `npm install`
+- Start command: `npm start`
+See `tutorial4/README.txt` for details.
+
 ### Deploying Tutorial 3
 
 Create a **new Netlify site** linked to this repo:
@@ -70,6 +80,7 @@ Create a **new Netlify site** linked to this repo:
 
 * Tutorial 1: [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * Tutorial 3: [React](https://react.dev/), [React Router](https://reactrouter.com/), [Vite](https://vitejs.dev/)
+* Tutorial 4: [Express.js](https://expressjs.com/) - REST API backend
 
 
 ## Repository Structure
@@ -82,7 +93,7 @@ CSCI4177-Tutorials/
   tutorial3/     – Tutorial 3 app (React SPA: Login, User list, User detail, search)
       src/components/Login.jsx, UserList.jsx, UserDetail.jsx
       package.json, vite.config.js
-  tutorial4/
+  tutorial4/    – Tutorial 4 app (Express REST API: GET /users, GET /user/:id, POST /add, PUT /update/:id)
   tutorial5/
   tutorial6/
   README.txt
