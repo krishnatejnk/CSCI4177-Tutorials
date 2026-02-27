@@ -4,7 +4,7 @@ Individual deliverable for CSCI 4177/5709. Express.js REST API with CRUD operati
 
 * Date Created: 27 Feb 2026
 * Last Modification Date: 27 Feb 2026
-* Lab URL: [Update with your deployment link after deploying - e.g., Render, Railway, or Cyclic]
+* API URL: https://csci4177-tutorials.onrender.com/
 * Git URL: https://github.com/krishnatejnk/CSCI4177-Tutorials
 * GitLab: https://git.cs.dal.ca/knkumar/csci4177-tutorials
 
