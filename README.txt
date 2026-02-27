@@ -1,10 +1,12 @@
 # Tutorial 1 – Application Frameworks (Individual)
+# Tutorial 3 – Front-End Frameworks II (Individual)
 
-Individual deliverable for CSCI 4177/5709 Tutorial 1.
+Individual deliverable for CSCI 4177/5709 Tutorials.
 
 * *Date Created*: 26 Jan 2026
-* *Last Modification Date*: 26 Jan 2026
-* *Lab URL*: NETLIFY DEPLOYMENT URL - https://tranquil-paprenjak-3a7d30.netlify.app/
+* *Last Modification Date*: 27 Feb 2026
+* *Tutorial 1 Lab URL*: https://tranquil-paprenjak-3a7d30.netlify.app/
+* *Tutorial 3 Lab URL*: [Update with your Tutorial 3 Netlify deployment URL after deploying]
 * *Individual Tutorials GitLab : https://git.cs.dal.ca/knkumar/csci4177-tutorials
 * *Individual Tutorials GitHub : https://github.com/krishnatejnk/CSCI4177-Tutorials
 
@@ -54,24 +56,32 @@ To run the Tutorial 1 app locally:
 
 ## Deployment
 
-Tutorial 1 is deployed on **Netlify**. The publish directory is `tutorial1` (configured in `netlify.toml`). No build step is required. This repository is mirrored from GitHub to FCS GitLab for marking.
+Tutorial 1 is deployed on **Netlify** (publish: `tutorial1`, no build). Tutorial 3 is built with Vite and deployed (publish: `tutorial3/dist`). See `netlify.toml` for build settings. This repository is mirrored from GitHub to FCS GitLab for marking.
+
+### Deploying Tutorial 3
+
+Create a **new Netlify site** linked to this repo:
+- **Base directory**: `tutorial3`
+- **Build command**: `npm run build`
+- **Publish directory**: `tutorial3/dist`
 
 
 ## Built With
 
-* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) – Markup for Tutorial 1 page
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) – Styling
+* Tutorial 1: [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* Tutorial 3: [React](https://react.dev/), [React Router](https://reactrouter.com/), [Vite](https://vitejs.dev/)
 
 
 ## Repository Structure
 
 CSCI4177-Tutorials/
-  tutorial1/     – Tutorial 1 app (deployed on Netlify)s
-      README.txt
+  tutorial1/     – Tutorial 1 app (static HTML)
       index.html
       style.css
   tutorial2/
-  tutorial3/
+  tutorial3/     – Tutorial 3 app (React SPA: Login, User list, User detail, search)
+      src/components/Login.jsx, UserList.jsx, UserDetail.jsx
+      package.json, vite.config.js
   tutorial4/
   tutorial5/
   tutorial6/
