@@ -1,7 +1,7 @@
-# Netlify config for Tutorial 1 deployment (static HTML)
-# Publish directory: tutorial1 (static HTML, no build)
-#
-# For Tutorial 3: Create a separate Netlify site, set Base directory = "tutorial3",
-# Build command = "npm run build", Publish directory = "tutorial3/dist"
+# Netlify config - update depending on which tutorial you deploy:
+# Tutorial 1: base = "", publish = "tutorial1", no build command
+# Tutorial 3: base = "tutorial3", command = "npm run build", publish = "dist"
 [build]
-  publish = "tutorial1"
+  base = "tutorial3"
+  command = "npm run build"
+  publish = "dist"
