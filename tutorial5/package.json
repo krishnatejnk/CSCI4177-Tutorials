@@ -1,0 +1,13 @@
+{
+  "name": "tutorial5",
+  "version": "1.0.0",
+  "description": "Tutorial 5 - MongoDB Atlas: NoSQL Database Instance",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "run-queries": "node run-queries.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
