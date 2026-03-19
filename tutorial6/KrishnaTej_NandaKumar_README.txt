@@ -4,6 +4,7 @@ Individual deliverable for CSCI 4177/5709. Node.js Express REST API connected to
 
 * Date Created: 14 Mar 2026
 * Last Modification Date: 19 Mar 2026
+* Lab URL: https://tutorial6-rest-api.onrender.com
 * Git URL: https://github.com/krishnatejnk/CSCI4177-Tutorials
 * GitLab: https://git.cs.dal.ca/knkumar/csci4177-tutorials
 
