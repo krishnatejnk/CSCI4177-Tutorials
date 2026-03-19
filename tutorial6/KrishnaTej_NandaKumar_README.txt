@@ -54,7 +54,7 @@ Installing
 
 API Endpoints
 
-Base URL: <your_application_link> or http://localhost:3000 (local)
+Base URL: https://tutorial6-rest-api.onrender.com or http://localhost:3000 (local)
 
 1. GET /users
    Returns a list of all users.
