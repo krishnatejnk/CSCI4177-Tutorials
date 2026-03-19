@@ -3,7 +3,7 @@ Tutorial 6 – REST API with Database
 Individual deliverable for CSCI 4177/5709. Node.js Express REST API connected to MongoDB Atlas (NoSQL). Same APIs as T5: create user, read user, read user by ID, update user. Adds DELETE route to remove user by ID. Implements failure responses (404, 400, 500).
 
 * Date Created: 14 Mar 2026
-* Last Modification Date: 14 Mar 2026
+* Last Modification Date: 19 Mar 2026
 * Git URL: https://github.com/krishnatejnk/CSCI4177-Tutorials
 * GitLab: https://git.cs.dal.ca/knkumar/csci4177-tutorials
 

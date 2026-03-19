@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tutorial6-rest-api
+    runtime: node
+    rootDir: tutorial6
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 3000
